@@ -14,8 +14,8 @@ abstract class BaseActivity: AppCompatActivity(){
     @LayoutRes
     abstract fun getLayoutId() : Int
     abstract fun initView()
-    protected abstract fun initData()
-    protected abstract fun initListener()
+    abstract fun initData()
+    abstract fun initListener()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

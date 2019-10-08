@@ -3,14 +3,15 @@
     package="cn.eatan.pet_tail">
 
     <application
-        android:name="cn.eatan.pet_tail.base.App"
+        android:name=".base.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="cn.eatan.pet_tail.ui.activity.LoginActivity">
+        <activity android:name=".ui.activity.LoginActivity"></activity>
+        <activity android:name=".ui.activity.LoginModeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
