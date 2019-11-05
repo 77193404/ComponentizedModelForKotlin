@@ -1,2 +1,2 @@
-include ':app', ':utils'
+include ':pet_tail', ':utils', ':lib_base'
 rootProject.name='52-Hz'

@@ -16,12 +16,16 @@ abstract class BaseActivity: AppCompatActivity(){
     abstract fun initView()
     abstract fun initData()
     abstract fun initListener()
+    var savedInstanceState: Bundle? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("base","onCreate")
         setContentView(getLayoutId())
         StatusBarUtil.setStatusBarColorAndFontColor(this)
+        if (savedInstanceState != null){
+            this.savedInstanceState = savedInstanceState
+        }
         initData()
         initView()
         initListener()

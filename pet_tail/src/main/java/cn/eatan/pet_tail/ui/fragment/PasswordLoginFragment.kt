@@ -3,6 +3,8 @@ package cn.eatan.pet_tail.ui.fragment
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -25,8 +27,23 @@ private const val ARG_PARAM2 = "param2"
  * Use the [PasswordLoginFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class PasswordLoginFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+class PasswordLoginFragment : Fragment()
+    ,TextWatcher{
+
+    override fun afterTextChanged(p0: Editable?) {
+
+    }
+
+    override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+    }
+
+    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+        if (check(user_phone_et.text.toString(), user_password_et.text.toString())){
+            login_bt.isEnabled = true
+        }
+    }
+
     private var param1: String? = null
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
@@ -66,6 +83,13 @@ class PasswordLoginFragment : Fragment() {
         } else {
             throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
         }
+    }
+
+    fun check(phone: String, password: String): Boolean{
+        if (phone.length == 11 && password.length == 6){
+            return true
+        }
+        return false
     }
 
     override fun onDetach() {
