@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <cn.eatan.module_user.controls.RollImageView
+        android:id="@+id/scrooll_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:speed="1dp"
+        app:src="@drawable/login_mode_bg"/>
+
+    <TextView
+        android:id="@+id/app_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        android:text="@string/app_name"
+        android:textSize="@dimen/qb_px_180"
+        android:textColor="@color/colorWhite"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"/>
+
+    <Button
+        android:id="@+id/mode_user_bt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:layout_marginStart="@dimen/qb_px_120"
+        android:layout_marginEnd="@dimen/qb_px_120"
+        android:text="@string/login"
+        android:textSize="@dimen/qb_px_50"
+        android:background="@drawable/button_login_mode_bg"/>
+    <Button
+        android:id="@+id/mode_tourists_bt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120"
+        android:text="@string/tourists"
+        android:textSize="@dimen/qb_px_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mode_user_bt"
+        android:layout_marginTop="@dimen/qb_px_60"
+        android:layout_marginStart="@dimen/qb_px_120"
+        android:layout_marginEnd="@dimen/qb_px_120"
+        android:background="@drawable/button_login_mode_bg"
+        />
+
+    <ImageView
+        android:id="@+id/weixin"
+        android:layout_width="@dimen/qb_px_80"
+        android:layout_height="@dimen/qb_px_80"
+        android:layout_marginBottom="@dimen/qb_px_130"
+        android:layout_marginStart="@dimen/qb_px_120"
+        android:background="@drawable/wechat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/weibo"
+        android:layout_width="@dimen/qb_px_80"
+        android:layout_height="@dimen/qb_px_80"
+        android:layout_marginBottom="@dimen/qb_px_130"
+        android:layout_marginStart="@dimen/qb_px_86"
+        android:background="@drawable/weibo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/weixin" />
+
+    <ImageView
+        android:id="@+id/qq"
+        android:layout_width="@dimen/qb_px_80"
+        android:layout_height="@dimen/qb_px_80"
+        android:layout_marginBottom="@dimen/qb_px_130"
+        android:layout_marginStart="@dimen/qb_px_86"
+        android:background="@drawable/qq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weibo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/qb_px_120"
+        android:text="注册"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/qb_px_43"
+        app:layout_constraintTop_toTopOf="@+id/qq"
+        app:layout_constraintBottom_toBottomOf="@+id/qq"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,9 @@
-apply plugin: 'com.android.library'
+if (isUserModule.toBoolean()) {
+    apply plugin: 'com.android.library'
+} else {
+    apply plugin: 'com.android.application'
+}
+
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 android {
@@ -22,6 +27,20 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            if (isUserModule.toBoolean()) {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+
+                java {
+                    exclude 'debug/**'
+                }
+            } else {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }
+        }
+    }
+
 }
 
 dependencies {
@@ -29,5 +48,6 @@ dependencies {
     implementation this.rootProject.depsLibs.stdlib
     implementation this.rootProject.depsLibs.appcompat
     implementation this.rootProject.depsLibs.coreKtx
-    api project(path: ':utils')
+    implementation this.rootProject.depsLibs.constraintlayout
+    implementation project(path: ':lib_base')
 }
