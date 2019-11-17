@@ -6,7 +6,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true">
 
-        <activity android:name="cn.eatan.module_chat.ParentActivity"/>
+        <activity android:name="cn.eatan.module_chat.ChatActivity"/>
 
     </application>
 </manifest>

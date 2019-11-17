@@ -1,12 +1,13 @@
-package cn.eatan.module_varieties
+package cn.eatan.module_user
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.alibaba.android.arouter.facade.annotation.Route
 
-class ParentActivity : AppCompatActivity() {
+class UserActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_parent)
+        setContentView(R.layout.activity_user)
     }
 }

@@ -26,8 +26,10 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation this.rootProject.depsLibs.stdlib
-    implementation this.rootProject.depsLibs.appcompat
-    implementation this.rootProject.depsLibs.coreKtx
+    api this.rootProject.depsLibs.stdlib
+    api this.rootProject.depsLibs.appcompat
+    api this.rootProject.depsLibs.coreKtx
+    api this.rootProject.depsLibs.constraintlayout
+    api this.rootProject.depsLibs.legacy
     api project(path: ':utils')
 }

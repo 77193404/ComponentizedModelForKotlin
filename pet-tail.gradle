@@ -10,17 +10,21 @@ ext {
     ]
 
     depsVersion = [
-            appcompat : '1.1.0',
-            coreKtx: '1.1.0',
-            constraintlayout:'1.1.3',
-            legacy:'1.0.0'
+            appcompat       : '1.1.0',
+            coreKtx         : '1.1.0',
+            constraintlayout: '1.1.3',
+            legacy          : '1.0.0',
+            arouterapi      : '1.5.0',
+            aroutercompiler : '1.2.2'
     ]
 
     depsLibs = [
-            appcompat : "androidx.appcompat:appcompat:${depsVersion.appcompat}",
-            stdlib    : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
-            coreKtx: "androidx.core:core-ktx:${depsVersion.coreKtx}",
-            constraintlayout:"androidx.constraintlayout:constraintlayout:${depsVersion.constraintlayout}",
-            legacy:"androidx.legacy:legacy-support-v4:${depsVersion.legacy}"
+            appcompat       : "androidx.appcompat:appcompat:${depsVersion.appcompat}",
+            stdlib          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            coreKtx         : "androidx.core:core-ktx:${depsVersion.coreKtx}",
+            constraintlayout: "androidx.constraintlayout:constraintlayout:${depsVersion.constraintlayout}",
+            legacy          : "androidx.legacy:legacy-support-v4:${depsVersion.legacy}",
+            arouterapi      : "com.alibaba:arouter-api:${depsVersion.arouterapi}",
+            aroutercompiler : "com.alibaba:arouter-compiler:${depsVersion.aroutercompiler}"
     ]
 }

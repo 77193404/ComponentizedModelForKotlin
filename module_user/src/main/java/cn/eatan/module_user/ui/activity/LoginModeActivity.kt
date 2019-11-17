@@ -8,8 +8,10 @@ import cn.eatan.module_user.mvp.contract.LoginModeContract
 import cn.eatan.module_user.mvp.presenter.LoginModePresenter
 import cn.eatan.mvp.basemvp.BaseMvpActivity
 import cn.eatan.utils.statusbarutil.StatusBarUtil
+import com.alibaba.android.arouter.facade.annotation.Route
 import kotlinx.android.synthetic.main.activity_login_mode.*
 
+@Route(path = "/user/login_mode_activity")
 class LoginModeActivity : BaseMvpActivity<LoginModeContract.View, LoginModeContract.Presenter>() {
 
     override fun initData() {

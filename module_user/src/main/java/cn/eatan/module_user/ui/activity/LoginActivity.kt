@@ -11,9 +11,10 @@ import cn.eatan.module_user.mvp.presenter.LoginPresenter
 import cn.eatan.mvp.basemvp.BaseMvpActivity
 import cn.eatan.pet_tail.ui.fragment.PasswordLoginFragment
 import cn.eatan.pet_tail.ui.fragment.PhoneLoginFragment
+import com.alibaba.android.arouter.facade.annotation.Route
 
 
-
+@Route(path = "/user/login_activity")
 class LoginActivity : BaseMvpActivity<LoginContract.View, LoginContract.Presenter>()
     , PasswordLoginFragment.OnFragmentInteractionListener
     , PhoneLoginFragment.OnFragmentInteractionListener{

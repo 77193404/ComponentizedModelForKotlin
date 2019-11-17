@@ -1,6 +1,7 @@
-package cn.eatan.mvp.base
+package cn.eatan.pet_tail
 
 import android.app.Application
+import com.alibaba.android.arouter.launcher.ARouter
 
 open class BaseApp: Application() {
 
@@ -11,5 +12,10 @@ open class BaseApp: Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+
+        ARouter.openLog()
+        ARouter.openDebug()
+        //ARouter初始化
+        ARouter.init(this)
     }
 }

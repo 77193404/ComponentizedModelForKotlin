@@ -7,7 +7,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ParentActivity"/>
+        <activity android:name=".ArticleActivity"/>
 
     </application>
 </manifest>
