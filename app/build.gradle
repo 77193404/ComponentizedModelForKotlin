@@ -37,11 +37,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-//    implementation this.rootProject.depsLibs.stdlib
-//    implementation this.rootProject.depsLibs.appcompat
-//    implementation this.rootProject.depsLibs.coreKtx
-//    implementation this.rootProject.depsLibs.constraintlayout
-//    implementation this.rootProject.depsLibs.legacy
     implementation project(path: ':lib_base')
     implementation project(path: ':module_user')
     implementation project(path: ':module_chat')
@@ -49,6 +44,5 @@ dependencies {
     implementation project(path: ':module_varieties')
 
     //ARouter
-    implementation this.rootProject.depsLibs.arouterapi
     kapt this.rootProject.depsLibs.aroutercompiler
 }

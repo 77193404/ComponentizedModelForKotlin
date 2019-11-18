@@ -58,6 +58,5 @@ dependencies {
     implementation project(path: ':lib_base')
 
 //    ARouter
-    implementation this.rootProject.depsLibs.arouterapi
     kapt this.rootProject.depsLibs.aroutercompiler
 }

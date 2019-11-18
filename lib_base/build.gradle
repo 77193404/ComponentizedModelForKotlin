@@ -31,5 +31,8 @@ dependencies {
     api this.rootProject.depsLibs.coreKtx
     api this.rootProject.depsLibs.constraintlayout
     api this.rootProject.depsLibs.legacy
+    api this.rootProject.depsLibs.anko
     api project(path: ':utils')
+
+    api this.rootProject.depsLibs.arouterapi
 }

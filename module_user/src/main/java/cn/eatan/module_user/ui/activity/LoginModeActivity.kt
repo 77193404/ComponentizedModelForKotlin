@@ -1,8 +1,8 @@
-package cn.eatan.pet_tail.ui.activity
+package cn.eatan.module_user.ui.activity
 
 import android.content.Intent
 import android.graphics.Typeface
-import androidx.core.content.ContextCompat.startActivity
+import android.view.View
 import cn.eatan.module_user.R
 import cn.eatan.module_user.mvp.contract.LoginModeContract
 import cn.eatan.module_user.mvp.presenter.LoginModePresenter
@@ -10,6 +10,7 @@ import cn.eatan.mvp.basemvp.BaseMvpActivity
 import cn.eatan.utils.statusbarutil.StatusBarUtil
 import com.alibaba.android.arouter.facade.annotation.Route
 import kotlinx.android.synthetic.main.activity_login_mode.*
+import org.jetbrains.anko.toast
 
 @Route(path = "/user/login_mode_activity")
 class LoginModeActivity : BaseMvpActivity<LoginModeContract.View, LoginModeContract.Presenter>() {
@@ -30,6 +31,10 @@ class LoginModeActivity : BaseMvpActivity<LoginModeContract.View, LoginModeContr
     override fun initListener() {
         mode_user_bt.setOnClickListener{
             startActivity(Intent(this@LoginModeActivity, LoginActivity::class.java))
+        }
+
+        mode_tourists_bt.setOnClickListener{
+            toast("游客登录")
         }
     }
 

@@ -1,4 +1,4 @@
-package cn.eatan.pet_tail
+package cn.eatan.lib_base.base
 
 import android.app.Application
 import com.alibaba.android.arouter.launcher.ARouter

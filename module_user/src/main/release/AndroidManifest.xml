@@ -7,8 +7,8 @@
         android:supportsRtl="true">
 
         <activity android:name="cn.eatan.module_user.UserActivity"/>
-        <activity android:name="cn.eatan.pet_tail.ui.activity.LoginActivity"/>
-        <activity android:name="cn.eatan.pet_tail.ui.activity.LoginModeActivity"/>
+        <activity android:name=".ui.activity.LoginActivity"/>
+        <activity android:name=".ui.activity.LoginModeActivity"/>
 
     </application>
 </manifest>

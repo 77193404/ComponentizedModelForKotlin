@@ -10,8 +10,8 @@
         <activity android:name="cn.eatan.module_user.UserActivity">
 
         </activity>
-        <activity android:name="cn.eatan.pet_tail.ui.activity.LoginActivity"/>
-        <activity android:name="cn.eatan.pet_tail.ui.activity.LoginModeActivity">
+        <activity android:name=".ui.activity.LoginActivity"/>
+        <activity android:name=".ui.activity.LoginModeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

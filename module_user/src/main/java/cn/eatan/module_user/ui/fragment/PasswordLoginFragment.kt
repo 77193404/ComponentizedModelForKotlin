@@ -1,7 +1,6 @@
-package cn.eatan.pet_tail.ui.fragment
+package cn.eatan.module_user.ui.fragment
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -11,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import cn.eatan.module_user.R
 
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.fragment_password_login.*
 
 // TODO: Rename parameter arguments, choose names that match

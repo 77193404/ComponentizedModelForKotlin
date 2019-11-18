@@ -7,4 +7,7 @@
     <color name="colorBlack">#000000</color>
     <color name="colorErrorRed">#df4040</color>
     <color name="colorGray">#808080</color>
+
+    <color name="colorTextBlack">#333333</color>
+    <color name="colorWhite_25">#40FFFFFF</color>
 </resources>
