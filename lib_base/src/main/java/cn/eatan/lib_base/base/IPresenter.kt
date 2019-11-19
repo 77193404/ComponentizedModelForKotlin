@@ -10,5 +10,5 @@ interface IPresenter<in V: IView>{
     /**
      * 解除View
      */
-    fun deachView()
+    fun  deachView()
 }

@@ -13,6 +13,7 @@ android {
     compileSdkVersion this.rootProject.android.compileSdkVersion
     buildToolsVersion this.rootProject.android.buildToolsVersion
 
+    kotlinOptions { jvmTarget = 1.8 }
 
     defaultConfig {
         minSdkVersion this.rootProject.android.minSdkVersion
@@ -55,8 +56,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(path: ':lib_base')
-
     //ARouter
     kapt this.rootProject.depsLibs.aroutercompiler
+
+    implementation project(path: ':lib_base')
+    implementation project(path: ':lib_network')
 }

@@ -11,6 +11,9 @@ apply plugin: 'com.alibaba.arouter'
 android {
     compileSdkVersion this.rootProject.android.compileSdkVersion
     buildToolsVersion this.rootProject.android.buildToolsVersion
+
+    kotlinOptions { jvmTarget = 1.8 }
+
     defaultConfig {
         applicationId "cn.eatan.pet_tail"
         minSdkVersion this.rootProject.android.minSdkVersion

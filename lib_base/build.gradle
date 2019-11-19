@@ -5,6 +5,7 @@ android {
     compileSdkVersion this.rootProject.android.compileSdkVersion
     buildToolsVersion this.rootProject.android.buildToolsVersion
 
+    kotlinOptions { jvmTarget = 1.8 }
 
     defaultConfig {
         minSdkVersion this.rootProject.android.minSdkVersion
@@ -32,7 +33,17 @@ dependencies {
     api this.rootProject.depsLibs.constraintlayout
     api this.rootProject.depsLibs.legacy
     api this.rootProject.depsLibs.anko
-    api project(path: ':utils')
-
+    //retrofit
+    api this.rootProject.depsLibs.retrofit
+    api this.rootProject.depsLibs.retrofit_gson
+    api this.rootProject.depsLibs.retrofit_rxjava
+    api this.rootProject.depsLibs.okhttp
+    api this.rootProject.depsLibs.okhttp_interceptor
+    //rx
+    api this.rootProject.depsLibs.rxkotlin
+    api this.rootProject.depsLibs.rxandroid
+    //ARouter
     api this.rootProject.depsLibs.arouterapi
+
+    api project(path: ':utils')
 }

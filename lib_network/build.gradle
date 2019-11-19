@@ -1,14 +1,6 @@
-if (isUserModule.toBoolean()) {
-    apply plugin: 'com.android.library'
-} else {
-    apply plugin: 'com.android.application'
-}
-
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.alibaba.arouter'
-apply plugin: 'kotlin-kapt'
-
 android {
     compileSdkVersion this.rootProject.android.compileSdkVersion
     buildToolsVersion this.rootProject.android.buildToolsVersion
@@ -22,13 +14,6 @@ android {
         versionName this.rootProject.android.versionName
         multiDexEnabled this.rootProject.android.multiDexEnabled
         consumerProguardFiles 'consumer-rules.pro'
-
-        //ARouter配置
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [ AROUTER_MODULE_NAME : project.getName() ]
-            }
-        }
     }
 
     buildTypes {
@@ -38,26 +23,9 @@ android {
         }
     }
 
-    sourceSets {
-        main {
-            if (isUserModule.toBoolean()) {
-                manifest.srcFile 'src/main/release/AndroidManifest.xml'
-
-                java {
-                    exclude 'debug/**'
-                }
-            } else {
-                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-            }
-        }
-    }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(path: ':lib_base')
-
-//    ARouter
-    kapt this.rootProject.depsLibs.aroutercompiler
 }

@@ -13,6 +13,7 @@ android {
     compileSdkVersion this.rootProject.android.compileSdkVersion
     buildToolsVersion this.rootProject.android.buildToolsVersion
 
+    kotlinOptions { jvmTarget = 1.8 }
 
     defaultConfig {
         minSdkVersion this.rootProject.android.minSdkVersion
