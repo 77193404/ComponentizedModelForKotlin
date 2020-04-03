@@ -25,7 +25,7 @@ android {
         //ARouter配置
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ AROUTER_MODULE_NAME : project.getName() ]
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
     }
@@ -41,10 +41,12 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(path: ':lib_base')
-    implementation project(path: ':module_user')
-    implementation project(path: ':module_chat')
-    implementation project(path: ':module_article')
-    implementation project(path: ':module_varieties')
+    if (isUserModule.toBoolean()) {
+        implementation project(path: ':module_user')
+        implementation project(path: ':module_chat')
+        implementation project(path: ':module_article')
+        implementation project(path: ':module_varieties')
+    }
 
     //ARouter
     kapt this.rootProject.depsLibs.aroutercompiler

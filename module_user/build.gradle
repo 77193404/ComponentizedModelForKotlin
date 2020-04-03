@@ -56,9 +56,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':lib_base')
     //ARouter
     kapt this.rootProject.depsLibs.aroutercompiler
 
-    implementation project(path: ':lib_base')
     implementation project(path: ':lib_network')
 }
